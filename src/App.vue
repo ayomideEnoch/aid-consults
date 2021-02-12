@@ -1,12 +1,12 @@
 <template>
-  <div class="overflow-y-auto mb-12">
+  <div class="overflow-y-auto">
     <!-- Top Bar -->
     <section class="bg-green-100 h-48 top-nav-radius">
       <div class="flex justify-between mx-6 py-2">
         <div>
           <img src="./assets/logo.png" alt="logo" class="h-12" />
         </div>
-        <div class="bg-gray-100 rounded-full shadow-md w-1/3 flex justify-center">
+        <div class="bg-gray-100 rounded-full shadow-md w-1/3 flex justify-center mx-2">
           <input
             placeholder="Search"
             class="p-1.5 pl-5 bg-transparent focus:outline-none w-full"
@@ -36,18 +36,19 @@
     </section>
     <!-- slider -->
     <section class="flex justify-center w-full">
-      <div class="w-10/12 -mt-28 rounded-3xl bg-green-400 h-72 relative">
-        <i
-          class="fas fa-chevron-left bg-green-200 hover:bg-green-100 cursor-pointer p-4 shadow-lg top-32 -left-3 absolute"
-        ></i>
-        <i
-          class="fas fa-chevron-right bg-green-200 hover:bg-green-100 p-4 cursor-pointer shadow-lg top-32 -right-3 absolute"
-        ></i>
+      <div
+        class="w-10/12 -mt-28 rounded-3xl bg-green-400 shadow-2xl border-4 border-green-100 h-72 relative overflow-hidden"
+      >
+        <img
+          src="https://i.pinimg.com/originals/da/0b/02/da0b02a411073f9a51a5723854893236.gif"
+          alt="Slider image"
+          class="h-full w-full transform scale-125 inset-0 object-cover"
+        />
       </div>
     </section>
     <!-- filter -->
-    <section class="mt-2 flex justify-center w-full">
-      <div class="w-10/12 flex lg:justify-end justify-center">
+    <section class="my-4 flex justify-center w-full">
+      <div class="w-10/12 flex md:justify-end justify-center">
         <div class="flex">
           <button
             @click="filterAll"
@@ -76,12 +77,8 @@
     </section>
     <!-- products -->
     <section class="mt-2 w-full flex justify-center">
-      <div class="flex flex-wrap w-10/12">
-        <div
-          v-for="(product, index) in filter"
-          :key="product.index"
-          class="w-full md:w-2/3 lg:w-1/3 p-6"
-        >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-10/12">
+        <div v-for="(product, index) in filter" :key="product.index" class="w-full">
           <div class="relative overflow-hidden h-56 bg-green-400 rounded-t-2xl">
             <img
               :src="product.img"
@@ -101,6 +98,17 @@
           </div>
         </div>
       </div>
+    </section>
+    <!-- Footer -->
+    <section class="bg-green-700 mt-12">
+      <a
+        href="https://twitter.com/ayomideIbosiola"
+        target="_blank"
+        class="flex justify-center items-center text-white py-4"
+      >
+        <p class="">Built by Ayomide Ibosiola</p>
+        <i class="fab fa-twitter pl-2"></i>
+      </a>
     </section>
   </div>
 </template>
