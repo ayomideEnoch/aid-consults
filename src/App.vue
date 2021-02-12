@@ -37,12 +37,12 @@
     <!-- slider -->
     <section class="flex justify-center w-full">
       <div
-        class="w-10/12 -mt-28 rounded-3xl bg-green-400 shadow-2xl border-4 border-green-100 h-72 relative overflow-hidden"
+        class="w-10/12 -mt-28 rounded-3xl bg-green-400 shadow-2xl border-4 border-green-100 h-60 sm:h-72 relative overflow-hidden"
       >
         <img
           src="https://i.pinimg.com/originals/da/0b/02/da0b02a411073f9a51a5723854893236.gif"
           alt="Slider image"
-          class="h-full w-full transform scale-125 inset-0 object-cover"
+          class="h-full w-full transform sm:scale-125 scale-150 inset-0 object-cover"
         />
       </div>
     </section>
