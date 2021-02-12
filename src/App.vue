@@ -25,9 +25,10 @@
           >
             <i class="fas fa-shopping-cart text-green-700"></i>
             <p
-              class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full px-1 text-xs"
+              v-if="cartCheckout.length !== 0"
+              class="absolute -top-1 -right-2 bg-red-500 text-white rounded-full py-0.5 px-1 text-xs"
             >
-              12
+              {{ cartCheckout.length }}
             </p>
           </div>
         </div>

@@ -1,3 +1,7 @@
+Test URL:
+https://aid-consults.netlify.app/
+
+
 CHALLENGE:
 
 You are expected to develop a redesigned version of the attached design. Kindly make use of Vue.js/Nuxt.js and any design framework (e.g Vuetify, Bootstrap-Vue, Tailwind, etc.) to achieve this challenge.
